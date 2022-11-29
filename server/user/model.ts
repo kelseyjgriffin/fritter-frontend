@@ -39,7 +39,7 @@ const UserSchema = new Schema({
   // the actual name of the user
   name: {
     type: String,
-    required: true
+    required: false
   },
   // the birthday of the user
   birthday: {
