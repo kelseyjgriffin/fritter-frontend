@@ -39,6 +39,9 @@
             button="🔄 Get freets"
           />
         </div>
+      </header>
+    <section>
+      <header>
         <div class="right">
           <GetFreetsByTagForm
             ref="getFreetsByTagForm"
@@ -48,6 +51,7 @@
           />
         </div>
       </header>
+    </section>
       <section
         v-if="$store.state.freets.length"
       >
