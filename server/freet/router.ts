@@ -27,7 +27,7 @@ const router = express.Router();
  router.get(
   '/',
   async (req: Request, res: Response, next: NextFunction) => {
-    // Check if authorId query parameter was supplied
+    // Check if tag query parameter was supplied
     if (req.query.tag !== undefined) {
       next();
       return;

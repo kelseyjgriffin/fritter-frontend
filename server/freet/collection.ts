@@ -71,7 +71,7 @@ class FreetCollection {
    * @return {Promise<HydratedDocument<Freet>[]>} - An array of all of the freets
    */
    static async findAllByTag(searchTag: string): Promise<Array<HydratedDocument<Freet>>> {
-    return FreetModel.find({tag: searchTag}).populate('tag');
+    return FreetModel.find({tag: searchTag}).sort({dateModified: -1}).populate('authorId');
   }
 
   /**
