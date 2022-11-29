@@ -91,9 +91,6 @@ router.delete(
  *
  * @param {string} username - username of user
  * @param {string} password - user's password
- * @param {string} name - the name of the user
- * @param {string} bio - the bio of the user
- * @param {string} birthday - the birthday of the user
  * @return {UserResponse} - The created user
  * @throws {403} - If there is a user already logged in
  * @throws {409} - If username is already taken
@@ -109,7 +106,7 @@ router.post(
     userValidator.isValidPassword
   ],
   async (req: Request, res: Response) => {
-    const user = await UserCollection.addOne(req.body.username, req.body.password, req.body.name, req.body.bio, req.body.birthday);
+    const user = await UserCollection.addOne(req.body.username, req.body.password);
     req.session.userId = user._id.toString();
     res.status(201).json({
       message: `Your account was created successfully. You have been logged in as ${user.username}`,
