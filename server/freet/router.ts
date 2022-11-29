@@ -16,6 +16,34 @@ const router = express.Router();
  *                      order by date modified
  */
 /**
+ * Get freets by tag
+ *
+ * @name GET /api/freets?tag=TAG
+ *
+ * @return {FreetResponse[]} - A list of all the freets with searched tag
+ * @throws {404} - If no freet has given tag
+ * 
+ */
+ router.get(
+  '/',
+  async (req: Request, res: Response, next: NextFunction) => {
+    // Check if authorId query parameter was supplied
+    if (req.query.tag !== undefined) {
+      next();
+      return;
+    }
+
+    const allFreets = await FreetCollection.findAll();
+    const response = allFreets.map(util.constructFreetResponse);
+    res.status(200).json(response);
+  },
+  async (req: Request, res: Response) => {
+    const tagFreets = await FreetCollection.findAllByTag(req.query.tag as string);
+    const response = tagFreets.map(util.constructFreetResponse);
+    res.status(200).json(response);
+  }
+);
+/**
  * Get freets by author.
  *
  * @name GET /api/freets?author=username
