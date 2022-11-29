@@ -16,12 +16,15 @@ class UserCollection {
    *
    * @param {string} username - The username of the user
    * @param {string} password - The password of the user
+   * @param {string} name - the name of the user
+   * @param {string} bio - the bio of the user
+   * @param {string} birthday - the birthday of the user
    * @return {Promise<HydratedDocument<User>>} - The newly created user
    */
-  static async addOne(username: string, password: string): Promise<HydratedDocument<User>> {
+  static async addOne(username: string, password: string, name: string, bio: string, birthday: string): Promise<HydratedDocument<User>> {
     const dateJoined = new Date();
 
-    const user = new UserModel({username, password, dateJoined});
+    const user = new UserModel({username, password, name, bio, birthday, dateJoined});
     await user.save(); // Saves user to MongoDB
     return user;
   }
@@ -67,20 +70,29 @@ class UserCollection {
    * @param {Object} userDetails - An object with the user's updated credentials
    * @return {Promise<HydratedDocument<User>>} - The updated user
    */
-  static async updateOne(userId: Types.ObjectId | string, userDetails: {password?: string; username?: string}): Promise<HydratedDocument<User>> {
+   static async updateOne(userId: Types.ObjectId | string, userDetails: any): Promise<HydratedDocument<User>> {
     const user = await UserModel.findOne({_id: userId});
     if (userDetails.password) {
-      user.password = userDetails.password;
+      user.password = userDetails.password as string;
     }
 
     if (userDetails.username) {
-      user.username = userDetails.username;
+      user.username = userDetails.username as string;
+    }
+    if (userDetails.name) {
+      user.name = userDetails.name as string;
+    }
+    if (userDetails.username) {
+      user.bio = userDetails.bio as string;
+    }
+    if (userDetails.username) {
+      user.birthday = userDetails.birthday as string;
     }
 
     await user.save();
     return user;
   }
-
+  
   /**
    * Delete a user from the collection.
    *
