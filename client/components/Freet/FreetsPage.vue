@@ -74,12 +74,14 @@
 import FreetComponent from '@/components/Freet/FreetComponent.vue';
 import CreateFreetForm from '@/components/Freet/CreateFreetForm.vue';
 import GetFreetsForm from '@/components/Freet/GetFreetsForm.vue';
+import GetFreetsByTagForm from '@/components/Freet/GetFreetsByTagForm.vue';
 
 export default {
   name: 'FreetPage',
-  components: {FreetComponent, GetFreetsForm, CreateFreetForm},
+  components: {FreetComponent, GetFreetsForm, CreateFreetForm, GetFreetsByTagForm},
   mounted() {
     this.$refs.getFreetsForm.submit();
+    this.$refs.getFreetsBytagForm.submit();
   }
 };
 </script>
