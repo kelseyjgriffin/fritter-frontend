@@ -27,9 +27,17 @@
           <h2>
             Viewing all freets
             <span v-if="$store.state.filter">
-              by @{{ $store.state.filter }}
+              by {{ $store.state.filter }}
             </span>
           </h2>
+        </div>
+        <div class="center">
+          <GetFreetsByTagForm
+            ref="getFreetsByTagForm"
+            value="tag"
+            placeholder="🔍 Filter by tag (optional)"
+            button="🔄 Get freets"
+          />
         </div>
         <div class="right">
           <GetFreetsForm
@@ -40,18 +48,6 @@
           />
         </div>
       </header>
-    <section>
-      <header>
-        <div class="right">
-          <GetFreetsByTagForm
-            ref="getFreetsByTagForm"
-            value="tag"
-            placeholder="🔍 Filter by tag (optional)"
-            button="🔄 Get freets"
-          />
-        </div>
-      </header>
-    </section>
       <section
         v-if="$store.state.freets.length"
       >
