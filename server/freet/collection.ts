@@ -17,15 +17,17 @@ class FreetCollection {
    *
    * @param {string} authorId - The id of the author of the freet
    * @param {string} content - The id of the content of the freet
+   * @param {string} tag - the tag assigned to the freet
    * @return {Promise<HydratedDocument<Freet>>} - The newly created freet
    */
-  static async addOne(authorId: Types.ObjectId | string, content: string): Promise<HydratedDocument<Freet>> {
+  static async addOne(authorId: Types.ObjectId | string, content: string, tag: string): Promise<HydratedDocument<Freet>> {
     const date = new Date();
     const freet = new FreetModel({
       authorId,
       dateCreated: date,
       content,
-      dateModified: date
+      dateModified: date,
+      tag
     });
     await freet.save(); // Saves freet to MongoDB
     return freet.populate('authorId');
@@ -60,6 +62,16 @@ class FreetCollection {
   static async findAllByUsername(username: string): Promise<Array<HydratedDocument<Freet>>> {
     const author = await UserCollection.findOneByUsername(username);
     return FreetModel.find({authorId: author._id}).sort({dateModified: -1}).populate('authorId');
+  }
+
+  /**
+   * Get all the freets in by given tag
+   *
+   * @param {string} searchTag - the tag searched for by user
+   * @return {Promise<HydratedDocument<Freet>[]>} - An array of all of the freets
+   */
+   static async findAllByTag(searchTag: string): Promise<Array<HydratedDocument<Freet>>> {
+    return FreetModel.find({tag: searchTag}).populate('tag');
   }
 
   /**

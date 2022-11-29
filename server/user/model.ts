@@ -12,6 +12,9 @@ export type User = {
   username: string;
   password: string;
   dateJoined: Date;
+  name: string;
+  birthday: string;
+  bio:string;
 };
 
 // Mongoose schema definition for interfacing with a MongoDB table
@@ -32,6 +35,21 @@ const UserSchema = new Schema({
   dateJoined: {
     type: Date,
     required: true
+  },
+  // the actual name of the user
+  name: {
+    type: String,
+    required: true
+  },
+  // the birthday of the user
+  birthday: {
+    type: String,
+    required: false
+  },
+  // a bio about the user
+  bio: {
+    type: String,
+    required: false
   }
 });
 
