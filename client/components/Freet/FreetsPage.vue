@@ -83,18 +83,19 @@ export default {
 </script>
 
 <style scoped>
+template {
+  background-color: #CAE5FF;
+}
+
 section {
   display: flex;
   flex-direction: column;
-  background-color: #6D98BA;
 }
 
 header, header > * {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #274060;
-    color: white;
 }
 
 button {
