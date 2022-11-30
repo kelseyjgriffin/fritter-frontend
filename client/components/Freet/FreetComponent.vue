@@ -170,8 +170,8 @@ export default {
 <style scoped>
 .freet {
     border: 1px solid rgb(187, 187, 187);
-    padding: 50px;
+    padding: 5px;
     position: relative;
-    background-color: #FFF4E9;
+    background-color: #ffffff;
 }
 </style>
