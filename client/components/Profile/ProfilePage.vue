@@ -6,8 +6,6 @@
     <section>
       <header>
         <h2>Profile for {{ $store.state.username }}</h2>
-        <h4 class="birthday">{{user.birthday}}</h4>
-        <h4 class="bio">{{user.bio}}</h4>
       </header>
     </section>
     <section>
@@ -17,8 +15,12 @@
 </template>
 
 <script>
+import ProfileComponent from '@/components/Account/ProfileComponent.vue';
 
 export default {
-  name: 'ProfilePage'
+  name: 'ProfilePage',
+  components: {
+    ProfileComponent,
+  }
 };
 </script>
