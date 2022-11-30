@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import ProfileComponent from '@/components/Account/ProfileComponent.vue';
+import ProfileComponent from '@/components/Profile/ProfileComponent.vue';
 
 export default {
   name: 'ProfilePage',
