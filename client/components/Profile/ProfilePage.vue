@@ -10,6 +10,16 @@
         <h4 class="bio">{{user.bio}}</h4>
       </header>
     </section>
+    <section>
+      <ProfileComponent />
+    </section>
   </main>
 </template>
 
+<script>
+
+export default {
+  name: 'ProfilePage',
+  }
+};
+</script>
