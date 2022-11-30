@@ -50,9 +50,11 @@
     </p>
     <p class="info">
       Posted at {{ freet.dateModified }}
-      {{ freet.tag }}
       <i v-if="freet.edited">(edited)</i>
     </p>
+    <div class="tag">
+      {{ freet.tag }}
+    </div>
     <section class="alerts">
       <article
         v-for="(status, alert, index) in alerts"
@@ -174,5 +176,11 @@ export default {
     position: relative;
     background-color: #ffffff;
     margin: 10px;
+}
+
+.tag {
+  align-items: right;
+  background-color: #B57BA6;
+  color: white;
 }
 </style>
