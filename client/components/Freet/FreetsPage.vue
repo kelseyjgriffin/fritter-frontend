@@ -97,7 +97,9 @@ header, header > * {
 }
 button {
     margin-right: 10px;
-    background-color: #FFF4E9;
+    background-color: #1B2845;
+    border-radius: 10px;
+    color: white;
 }
 section .scrollbox {
   flex: 1 0 50vh;
