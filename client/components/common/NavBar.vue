@@ -77,7 +77,6 @@ img {
     grid-auto-flow: column;
     align-items: center;
     color: white;
-    text-decoration: none;
 }
 
 .right a {

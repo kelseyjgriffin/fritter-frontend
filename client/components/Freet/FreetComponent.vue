@@ -173,5 +173,6 @@ export default {
     padding: 5px;
     position: relative;
     background-color: #ffffff;
+    margin: 10px;
 }
 </style>
