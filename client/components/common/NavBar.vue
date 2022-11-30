@@ -22,9 +22,9 @@
       </router-link>
       <router-link
         v-else
-        to="/login"
+        to="/profile"
       >
-        Login
+        Profile
       </router-link>
     </div>
     <section class="alerts">
