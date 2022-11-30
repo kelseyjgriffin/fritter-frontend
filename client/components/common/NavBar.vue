@@ -21,7 +21,7 @@
         Account
       </router-link>
       <router-link
-        v-else
+        v-if
         to="/profile"
       >
         Profile

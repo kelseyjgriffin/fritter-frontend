@@ -23,7 +23,6 @@
 export default {
   name: 'ProfileComponent',
   props: {
-    // Data from the stored freet
     user: {
       type: Object,
       required: true
