@@ -86,16 +86,20 @@ export default {
 section {
   display: flex;
   flex-direction: column;
+  background-color: #6D98BA;
 }
 
 header, header > * {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #274060;
+    color: white;
 }
 
 button {
     margin-right: 10px;
+    background-color: #FFF4E9;
 }
 
 section .scrollbox {
