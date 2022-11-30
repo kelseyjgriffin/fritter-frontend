@@ -52,7 +52,7 @@
       Posted at {{ freet.dateModified }}
       <i v-if="freet.edited">(edited)</i>
     </p>
-    <p class="tag">
+    <p class="tag" v-if="freet.tag">
       <mark>{{ freet.tag }}</mark>
     </p>
     <section class="alerts">
