@@ -5,10 +5,10 @@
   <main>
     <section>
       <header>
-        <h2 class="profilename">Profile for {{ $store.state.name }}</h2>
+        <h2 class="profilename">Hi, My name is {{ $store.state.name }}</h2>
         <h3 class="profileusername"><mark>Username: {{ $store.state.username }}</mark></h3>
         <h3 class="profilebday" v-if="$store.state.birthday">Birthday: {{ $store.state.birthday }}</h3>
-        <h3 class="profilebio" v-if="$store.state.bio">Bio: {{ $store.state.bio }}</h3>
+        <h3 class="profilebio" v-if="$store.state.bio">A bit about me: {{ $store.state.bio }}</h3>
       </header>
     </section>
     <section>
@@ -29,8 +29,9 @@ export default {
 </script>
 
 <style scoped>
-* {
+main {
   background-color: #CAE5FF;
+  padding: 20px;
 }
 
 .profilename {
@@ -40,13 +41,13 @@ export default {
 }
 
 .profileusername {
-  color: white;
   text-align: center;
   font-size: 20px;
 }
 
 mark{
   background-color: #B57BA6;
+  color: white;
 }
 
 .profilebday {
