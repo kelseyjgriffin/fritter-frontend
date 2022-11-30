@@ -83,7 +83,6 @@ export default {
 </script>
 
 <style scoped>
-
 main {
   background-color: #CAE5FF;
 }
@@ -99,7 +98,6 @@ header, header > * {
 button {
     margin-right: 10px;
     background-color: #FFF4E9;
-    border-radius: 10px;
 }
 section .scrollbox {
   flex: 1 0 50vh;
