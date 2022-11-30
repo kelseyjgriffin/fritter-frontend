@@ -86,6 +86,9 @@ export default {
 main {
   background-color: #CAE5FF;
 }
+template {
+  background-color: #CAE5FF;
+}
 section {
   display: flex;
   flex-direction: column;
