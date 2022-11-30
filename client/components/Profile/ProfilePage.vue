@@ -5,8 +5,10 @@
   <main>
     <section>
       <header>
-        <h2>Profile for {{ $store.state.username }}</h2>
-        <h3>Name: {{ $store.state.name }}</h3>
+        <h2>Profile for {{ $store.state.name }}</h2>
+        <h3>Username: {{ $store.state.username }}</h3>
+        <h3 v-if="$store.state.birthday">Birthday: {{ $store.state.birthday }}</h3>
+        <h3 v-if="$store.state.bio">Bio: {{ $store.state.bio }}</h3>
       </header>
     </section>
     <section>

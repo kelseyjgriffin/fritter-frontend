@@ -13,7 +13,9 @@ const store = new Vuex.Store({
     freets: [], // All freets created in the app
     username: null, // Username of the logged in user
     alerts: {}, // global success/error messages encountered during submissions to non-visible forms
-    name: null
+    name: null,
+    birthday: null,
+    bio: null
   },
   mutations: {
     alert(state, payload) {
@@ -38,6 +40,20 @@ const store = new Vuex.Store({
        * @param name - new name to set
        */
       state.name = name;
+    },
+    setBirthday(state, birthday) {
+      /**
+       * Update the stored name to the specified one.
+       * @param birthday - new name to set
+       */
+      state.birthday = birthday;
+    },
+    setBio(state, bio) {
+      /**
+       * Update the stored name to the specified one.
+       * @param bio - new name to set
+       */
+      state.bio = bio;
     },
     updateFilter(state, filter) {
       /**
