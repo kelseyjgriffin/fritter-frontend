@@ -6,6 +6,7 @@
     <section>
       <header>
         <h2>Profile for {{ $store.state.username }}</h2>
+        <h3 class="name">{{ user.name }}</h3>
       </header>
     </section>
     <section>
