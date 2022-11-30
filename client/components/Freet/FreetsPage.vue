@@ -95,15 +95,13 @@ header, header > * {
     justify-content: space-between;
     align-items: center;
 }
-.button {
+button {
     margin-right: 10px;
-    background-color: #1B2845;
-    border-radius: 10px;
-    color: white;
 }
 section .scrollbox {
   flex: 1 0 50vh;
   padding: 3%;
   overflow-y: scroll;
 }
+
 </style>

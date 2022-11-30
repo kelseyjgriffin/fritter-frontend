@@ -36,3 +36,9 @@ export default {
   }
 };
 </script>
+
+<style>
+main {
+  background-color: #CAE5FF;
+}
+</style>
