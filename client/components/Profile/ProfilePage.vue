@@ -14,13 +14,3 @@
   </main>
 </template>
 
-<script>
-import ProfileComponent from '@/components/Account/ProfileComponent.vue';
-
-export default {
-  name: 'ProfilePage',
-  components: {
-    ProfileComponent,
-  }
-};
-</script>
