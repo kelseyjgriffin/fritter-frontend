@@ -20,6 +20,5 @@
 
 export default {
   name: 'ProfilePage'
-  }
 };
 </script>
