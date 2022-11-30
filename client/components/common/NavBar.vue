@@ -5,7 +5,7 @@
 <template>
   <nav>
     <div class="left">
-      <img src="../../public/logo.svg">
+      <img src="../../public/logowhite.svg">
       <h1 class="title">
         Fritter
       </h1>
@@ -63,7 +63,6 @@ nav {
 
 img {
     height: 32px;
-    color: white;
 }
 
 .left {
@@ -82,6 +81,7 @@ img {
 
 .right a {
     margin-left: 5px;
+    color: white;
 }
 
 .alerts {
