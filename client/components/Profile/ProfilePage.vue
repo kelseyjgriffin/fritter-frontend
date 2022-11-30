@@ -9,7 +9,14 @@
       </header>
     </section>
     <section>
-      <ProfileComponent />
+      <div>
+        <h4 class="birthday">
+          {{user.birthday}}
+        </h4>
+        <h4 class="bio">
+          {{user.bio}}
+        </h4>
+      </div>
     </section>
   </main>
 </template>
