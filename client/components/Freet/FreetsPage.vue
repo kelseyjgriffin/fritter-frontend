@@ -87,23 +87,20 @@ export default {
 main {
   background-color: #CAE5FF;
 }
-
 section {
   display: flex;
   flex-direction: column;
 }
-
 header, header > * {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 button {
     margin-right: 10px;
     background-color: #FFF4E9;
+    border-radius: 10px;
 }
-
 section .scrollbox {
   flex: 1 0 50vh;
   padding: 3%;

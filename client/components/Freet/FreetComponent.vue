@@ -50,8 +50,10 @@
     </p>
     <p class="info">
       Posted at {{ freet.dateModified }}
-      {{ freet.tag }}
       <i v-if="freet.edited">(edited)</i>
+    </p>
+    <p class="tag">
+      {{ freet.tag }}
     </p>
     <section class="alerts">
       <article
@@ -173,5 +175,14 @@ export default {
     padding: 5px;
     position: relative;
     background-color: #ffffff;
+    margin: 10px;
 }
+
+.tag {
+    border: 1px solid rgb(187, 187, 187);
+    padding: 1px;
+    position: right;
+    background-color: #274060;
+}
+
 </style>
