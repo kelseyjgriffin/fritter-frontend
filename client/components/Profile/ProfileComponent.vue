@@ -5,7 +5,7 @@
   <article class="profile">
     <header>
       <h3 class="name">
-        {{ user.name }}
+        {{user.name }}
       </h3>
       <div>
         <h4 class="birthday">
@@ -21,14 +21,8 @@
 
 <script>
 export default {
-  name: 'ProfileComponent',
-  props: {
-    user: {
-      type: Object,
-      required: true
-    }
-  },
-    }
+  name: 'ProfileComponent'
+  };
 
 </script>
 
