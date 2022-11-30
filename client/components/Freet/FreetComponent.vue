@@ -181,7 +181,7 @@ export default {
 mark {
   background-color: #B57BA6;
   color: white;
-  padding-right: 1px;
-  padding-left: 1px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 </style>
