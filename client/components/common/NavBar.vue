@@ -71,12 +71,13 @@ img {
 }
 
 .right {
-    font-size: 30px;
+    font-size: 25px;
     display: grid;
     gap: 16px;
     grid-auto-flow: column;
     align-items: center;
     color: white;
+    text-decoration: none;
 }
 
 .right a {
