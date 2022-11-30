@@ -30,3 +30,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+main {
+  background-color: #CAE5FF;
+}
+</style>
