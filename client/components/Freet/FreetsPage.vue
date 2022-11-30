@@ -83,10 +83,7 @@ export default {
 </script>
 
 <style scoped>
-main {
-  background-color: #CAE5FF;
-}
-template {
+* {
   background-color: #CAE5FF;
 }
 section {
